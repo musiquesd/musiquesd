@@ -44,8 +44,8 @@ export default function GaleriePage() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <SectionHeader
-        title={t("galerie.title").toUpperCase()}
-        subtitle={t("galerie.subtitle")}
+        title={t("gallery.title").toUpperCase()}
+        subtitle={t("gallery.subtitle")}
       />
 
       <div className="mb-10 flex flex-wrap justify-center gap-3">
@@ -56,11 +56,10 @@ export default function GaleriePage() {
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
-                isActive
+              className={`flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${isActive
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border bg-card text-muted-foreground hover:border-primary/50 hover:text-foreground"
-              }`}
+                }`}
             >
               <Icon className="h-4 w-4" />
               {cat.label}

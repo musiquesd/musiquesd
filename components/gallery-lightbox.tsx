@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
 import { type GalleryItem } from "@/lib/gallery-data"
 import { X, ChevronLeft, ChevronRight, Camera } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -120,7 +119,7 @@ function LightboxImage({ item }: { item: GalleryItem }) {
 
   if (error) {
     return (
-      <div className="flex flex-1 items-center justify-center bg-secondary p-8">
+      <div className="flex h-80 items-center justify-center bg-secondary p-8 md:h-[28rem]">
         <div className="flex flex-col items-center gap-3 text-center">
           <Camera className="h-16 w-16 text-muted-foreground" />
           <p className="text-sm text-muted-foreground">{item.filename}</p>
@@ -130,13 +129,12 @@ function LightboxImage({ item }: { item: GalleryItem }) {
   }
 
   return (
-    <div className="relative flex flex-1 items-center justify-center bg-secondary">
-      <Image
+    <div className="flex h-80 items-center justify-center bg-secondary md:h-[28rem]">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={src}
         alt={item.title}
-        fill
-        className="object-contain p-4"
-        sizes="(max-width: 768px) 100vw, 800px"
+        className="max-h-full max-w-full object-contain p-4"
         onError={() => setError(true)}
       />
     </div>
