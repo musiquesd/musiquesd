@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram } from "lucide-react"
+import { Facebook, Instagram, Youtube } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 function TikTokIcon({ className }: { className?: string }) {
@@ -88,6 +88,15 @@ export function Footer() {
               className="text-muted-foreground transition-colors hover:text-primary"
             >
               <TwitchIcon className="h-5 w-5" />
+            </Link>
+            <Link
+              href="https://youtube.com/@musiquesd5812"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Youtube className="h-5 w-5" />
             </Link>
           </div>
 

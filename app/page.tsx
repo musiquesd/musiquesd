@@ -21,7 +21,7 @@ import { useLanguage } from "@/lib/i18n/language-context"
 const serviceCardKeys = [
   { href: "/studio", icon: Mic2, tKey: "studio", image: "/images/hero-studio.jpg" },
   { href: "/dj-animation", icon: PartyPopper, tKey: "dj", image: "/images/hero-dj.jpg" },
-  { href: "/location", icon: MonitorPlay, tKey: "location", image: "/images/hero-studio.jpg" },
+  { href: "/location", icon: MonitorPlay, tKey: "location", image: "/images/hero-location.jpg" },
   { href: "/cours", icon: GraduationCap, tKey: "cours", image: "/images/hero-cours.jpg" },
 ]
 
@@ -148,9 +148,9 @@ export default function HomePage() {
             <Image
               src="/images/logo.jpg"
               alt="MusiqueSD - Studio Desjardins"
-              width={360}
-              height={126}
-              className="h-auto w-full max-w-[280px] object-contain opacity-80 drop-shadow-lg md:max-w-xs"
+              width={420}
+              height={147}
+              className="h-auto w-full max-w-[420px] object-contain opacity-80 drop-shadow-lg md:max-w-xs"
               priority
             />
           </div>
